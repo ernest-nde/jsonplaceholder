@@ -1,14 +1,22 @@
-import { useState } from "react";
-import hamburger from "./assets/hamburger.svg";
-import close from "./assets/close.svg";
+import { Link } from "react-router-dom";
 
 
 export default function Navbar() {
-    const [showMenu, setShowMenu] = useState(false);
-    
+
     return (
-        <div>
-        <h1>Navbar</h1>
-        </div>
+        <nav className="bg-slate-200 p-5 justify-center text-center">
+           <Link
+            to="/"
+            className="mx-2 text-md text-semibold"
+           >
+                Home
+           </Link>
+           <Link
+                to="/about/"
+                className="mx-2 text-md text-semibold"
+           >
+                About
+           </Link>
+        </nav>
     )
 }
