@@ -11,5 +11,7 @@ Currently, two official plugins are available:
 
 ## v0.0.1
 (16/08/23) : This is the first release of the project. As features, we have:
+
 - Display all users,
+- Display Single user,
 - Display users Todos, Albums and Posts list
