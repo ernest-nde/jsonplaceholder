@@ -84,7 +84,10 @@ export default function User() {
             <nav className="flex items-center justify-center">
               <NavLink 
                 to= {"/users/" + userData.data.id + "/todos"}
-                className={({isActive}) => `${isActive && "bg-amber-400 font-semibold italic"} mx-1 p-2`}
+                
+                className={
+                  ({isActive}) => `${isActive && "bg-amber-400 font-semibold italic"} mx-1 p-2`
+                }
               >
                 Todos
               </NavLink>
