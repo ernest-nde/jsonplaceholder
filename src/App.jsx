@@ -5,9 +5,10 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About";
 import Users from "./components/Users/Users";
 import User from "./components/Users/User/User";
-import UserTodos from "./components/Users/User/UserTodos";
-import UserAlbums from "./components/Users/User/UserAlbums";
-import UserPosts from "./components/Users/User/UserPosts";
+import UserTodos from "./components/Users/User/UserTodos/UserTodos";
+import UserAlbums from "./components/Users/User/UserAlbums/UserAlbums";
+import UserPosts from "./components/Users/User/UserPosts/UserPosts";
+import AlbumPhotos from "./components/Users/User/UserAlbums/AlbumPhotos/AlbumPhotos";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/users/:id/albums" element={<UserAlbums />} />
             <Route path="/users/:id/posts" element={<UserPosts />} />
           </Route>
+          <Route path="/albums/:albumId/photos" element={<AlbumPhotos />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFoud />} />
         </Routes>
