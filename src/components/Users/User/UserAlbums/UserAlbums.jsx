@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink, useParams } from "react-router-dom";
 
 export default function UserAlbums() {
-  const params = useParams();
+  const { id } = useParams();
 
   const [userAlbums, setUserAlbums] = useState({
     error: false,
@@ -10,7 +10,7 @@ export default function UserAlbums() {
   });
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users/" + params.id +"/albums/")
+    fetch("https://jsonplaceholder.typicode.com/users/" + id +"/albums/")
     .then(response => {
       if(response.ok) {
         return response.json();

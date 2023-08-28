@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 
 export default function UserTodos() {
-  const params = useParams();
+  const { id } = useParams();
 
   const [todoData, setTodoData] = useState({
     error: false,
@@ -12,7 +12,7 @@ export default function UserTodos() {
 
   
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users/" + params.id +"/todos/")
+    fetch("https://jsonplaceholder.typicode.com/users/" + id +"/todos/")
     .then(response => {
       if (response.ok) {
         return response.json();

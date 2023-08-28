@@ -15,3 +15,8 @@ Currently, two official plugins are available:
 - Display all users,
 - Display Single user,
 - Display users Todos, Albums and Posts list
+
+## v0.0.2
+(27/08/23) : Single user photo album
+
+With this version, after being able to display all users and features list, we are now able to display every user's photos album

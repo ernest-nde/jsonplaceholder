@@ -2,10 +2,8 @@ import { useState, useEffect } from "react";
 import { NavLink, Outlet, useParams } from "react-router-dom";
 import spinner from "../assets/spinner.svg";
 
-
-
 export default function User() {
-  const params = useParams();
+  const { id } = useParams();
 
   const [userData, setUserData] = useState({
     loading: false,
@@ -16,7 +14,7 @@ export default function User() {
   useEffect(() => {
     setUserData({...userData, loading: true});
 
-    fetch("https://jsonplaceholder.typicode.com/users/" + params.id)
+    fetch("https://jsonplaceholder.typicode.com/users/" + id)
     .then(response => {
       if(response.ok) {
         return response.json();
@@ -85,20 +83,20 @@ export default function User() {
           <div className="bg-green-300 block mx-auto w-full h-fit">
             <nav className="flex items-center justify-center">
               <NavLink 
-                className={({isActive}) => `${isActive && "bg-amber-400 font-semibold italic"} mx-1 p-2`}
                 to= {"/users/" + userData.data.id + "/todos"}
+                className={({isActive}) => `${isActive && "bg-amber-400 font-semibold italic"} mx-1 p-2`}
               >
                 Todos
               </NavLink>
               <NavLink 
-               className={({isActive}) => `${isActive && "bg-amber-400 font-semibold italic"} mx-1 p-2`}
                 to= {"/users/" + userData.data.id + "/albums"}
+                className={({isActive}) => `${isActive && "bg-amber-400 font-semibold italic"} mx-1 p-2`}
               >
                 Albums
               </NavLink>
               <NavLink 
-               className={({isActive}) => `${isActive && "bg-amber-400 font-semibold italic"} mx-1 p-2`}
                 to= {"/users/" + userData.data.id + "/posts"}
+                className={({isActive}) => `${isActive && "bg-amber-400 font-semibold italic"} mx-1 p-2`}
               >
                 Posts
               </NavLink>

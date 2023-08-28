@@ -3,7 +3,7 @@ import { NavLink, useParams } from "react-router-dom";
 
 
 export default function UserPosts() {
-  const params = useParams();
+  const { id } = useParams();
 
   const [userPosts, setUserPosts] = useState({
     error: false,
@@ -12,7 +12,7 @@ export default function UserPosts() {
 
   useEffect(() => {
 
-    fetch("https://jsonplaceholder.typicode.com/users/" + params.id +"/posts/")
+    fetch("https://jsonplaceholder.typicode.com/users/" + id +"/posts/")
     .then(response => {
       if(response.ok) {
         return response.json();
