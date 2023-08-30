@@ -9,6 +9,7 @@ import UserTodos from "./components/Users/User/UserTodos/UserTodos";
 import UserAlbums from "./components/Users/User/UserAlbums/UserAlbums";
 import UserPosts from "./components/Users/User/UserPosts/UserPosts";
 import AlbumPhotos from "./components/Users/User/UserAlbums/AlbumPhotos/AlbumPhotos";
+import Post from "./components/Users/User/UserPosts/Post/Post";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/users/:id/posts" element={<UserPosts />} />
           </Route>
           <Route path="/albums/:albumId/photos" element={<AlbumPhotos />} />
+          <Route path="/posts/:id" element={<Post />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFoud />} />
         </Routes>
