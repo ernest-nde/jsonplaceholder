@@ -18,10 +18,12 @@ export default function User() {
     .then(response => {
       if(response.ok) {
         return response.json();
+      } else {
+        throw new Error("Un problème est survenu");
       }
     })
     .then(data => {
-      setUserData({loading: false, error: false, data:data});
+      setUserData({loading: false, error: false, data});
     })
     .catch(()=>{setUserData({loading:false , error :true, data: undefined})});
 
