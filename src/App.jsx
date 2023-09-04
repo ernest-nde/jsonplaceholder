@@ -22,7 +22,6 @@ function App() {
           <Route path="/users" element={<Users />} />
           <Route path="/users/:id" element={<User />}> 
             <Route path="/users/:id/todos" element={<UserTodos />} />
-            <Route path="/users/:id/todos" element={<UserTodos />} />
             <Route path="/users/:id/albums" element={<UserAlbums />} />
             <Route path="/users/:id/posts" element={<UserPosts />} />
           </Route>
